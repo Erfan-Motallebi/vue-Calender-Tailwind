@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         favRose: {
           light: '#c64756',
-          default: '#e84545'
+          DEFAULT: '#150e56'
         },
         favGreen: {
           light: '#9ede73',
@@ -21,7 +21,7 @@ module.exports = {
         bodyColor: '#fad586'
       },
       fontSize: {
-
+        favSize: '2rem'
       }
     },
   },
@@ -31,7 +31,7 @@ module.exports = {
       addBase({
         'h1': { fontSize: `${theme('fontSize.2xl')}`, fontWeight: `${theme('fontWeight.bold')}`, color: `${theme('colors.favRose.light')}` },
         'p': { fontSize: `${theme('fontSize.xl')}`, color: `${theme('colors.favGreen.dark')}`, fontFamily: `${'fontFamily.serif'}` },
-        // 'h2': {}
+        'h2': { fontSize: `${theme('fontSize.favSize')}`, fontWeight: `${theme('fontWeight.extrabold')}`, color: `${theme('colors.favRose.DEFAULT')}` },
       })
     })
   ],

@@ -2,8 +2,9 @@
   <div class="w-full flex">
     <div class="m-auto my-10">
       <h1 class="my-3 text-center">Calender</h1>
-      <section class="flex">
+      <section class="flex justify-between">
         <h2 class="mx-6">{{ currentMonth }}</h2>
+        <h2 class="mx-6">{{ currentYear }}</h2>
       </section>
       <section class="flex my-5">
         <p
@@ -34,6 +35,7 @@ export default {
   data() {
     return {
       currentMonth: new Date().toLocaleString("default", { month: "long" }),
+      currentYear: new Date().getFullYear(),
       weeks: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
     };
   },
