@@ -30,7 +30,8 @@ module.exports = {
     plugin(function ({ addBase, theme }) {
       addBase({
         'h1': { fontSize: `${theme('fontSize.2xl')}`, fontWeight: `${theme('fontWeight.bold')}`, color: `${theme('colors.favRose.light')}` },
-        'p': { fontSize: `${theme('fontSize.xl')}`, color: `${theme('colors.favGreen.dark')}`, fontFamily: `${'fontFamily.serif'}` }
+        'p': { fontSize: `${theme('fontSize.xl')}`, color: `${theme('colors.favGreen.dark')}`, fontFamily: `${'fontFamily.serif'}` },
+        // 'h2': {}
       })
     })
   ],
