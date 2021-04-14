@@ -22,6 +22,11 @@ module.exports = {
       },
       fontSize: {
         favSize: '2rem'
+      },
+      backgroundColor: {
+        gray: {
+          dark: '#9e9d89'
+        }
       }
     },
   },
@@ -32,6 +37,7 @@ module.exports = {
         'h1': { fontSize: `${theme('fontSize.2xl')}`, fontWeight: `${theme('fontWeight.bold')}`, color: `${theme('colors.favRose.light')}` },
         'p': { fontSize: `${theme('fontSize.xl')}`, color: `${theme('colors.favGreen.dark')}`, fontFamily: `${'fontFamily.serif'}` },
         'h2': { fontSize: `${theme('fontSize.favSize')}`, fontWeight: `${theme('fontWeight.extrabold')}`, color: `${theme('colors.favRose.DEFAULT')}` },
+        'button': { fontSize: `${theme('fontSize.xl')}`, fontWeight: `${theme('fontWeight.bold')}`, color: `${theme('colors.favRose.light')}`, backgroundColor: theme('backgroundColor.gray.dark'), borderRadius: `${theme('borderRadius.lg')}` },
       })
     })
   ],

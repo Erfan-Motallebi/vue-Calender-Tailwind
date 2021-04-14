@@ -20,11 +20,15 @@
         <p
           class="text-center my-2"
           style="width: 14.28%"
-          v-for="day in 30"
+          v-for="day in daysOfMonth()"
           :key="day"
         >
           {{ day }}
         </p>
+      </section>
+      <section class="flex justify-between">
+        <button>Previous</button>
+        <button>Next</button>
       </section>
     </div>
   </div>
@@ -38,6 +42,11 @@ export default {
       currentYear: new Date().getFullYear(),
       weeks: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
     };
+  },
+  methods: {
+    daysOfMonth() {
+      return new Date(this.currentYear, new Date().getMonth() + 1, 0).getDate();
+    },
   },
 };
 </script>
