@@ -1,4 +1,6 @@
-<template> </template>
+<template>
+  <calender />
+</template>
 
 <script>
 import Calender from "./components/Calender.vue";
