@@ -27,8 +27,8 @@
         </p>
       </section>
       <section class="flex justify-between">
-        <button>Previous</button>
-        <button>Next</button>
+        <button @click="prev()">Previous</button>
+        <button @click="next()">Next</button>
       </section>
     </div>
   </div>
@@ -39,13 +39,20 @@ export default {
   data() {
     return {
       currentMonth: new Date().toLocaleString("default", { month: "long" }),
+      currentMonthDays: new Date().getMonth() + 1,
       currentYear: new Date().getFullYear(),
       weeks: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
     };
   },
   methods: {
     daysOfMonth() {
-      return new Date(this.currentYear, new Date().getMonth() + 1, 0).getDate();
+      return new Date(this.currentYear, this.currentMonthDays, 0).getDate();
+    },
+    prev() {
+      return this.currentMonthDays--;
+    },
+    next() {
+      return this.currentMonthDays++;
     },
   },
 };
