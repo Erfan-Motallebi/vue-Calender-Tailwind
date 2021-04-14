@@ -20,15 +20,26 @@
         <p
           class="text-center my-2"
           style="width: 14.28%"
+          v-for="day in startDay()"
+          :key="day"
+        ></p>
+        <p
+          class="text-center my-2"
+          style="width: 14.28%"
           v-for="day in daysOfMonth()"
           :key="day"
+          :class="[currentDay(day) ? 'currentDayStyle' : '']"
         >
           {{ day }}
         </p>
       </section>
       <section class="flex justify-between">
-        <button @click="prev()">Previous</button>
-        <button @click="next()">Next</button>
+        <button class="px-2 mt-2 active:bg-green-400" @click="prev()">
+          Previous
+        </button>
+        <button class="px-2 mt-2 active:bg-green-400" @click="next()">
+          Next
+        </button>
       </section>
     </div>
   </div>
@@ -54,6 +65,12 @@ export default {
     next() {
       return this.currentMonthDays++;
     },
+    startDay() {
+      return new Date(this.currentYear, this.currentMonthDays - 1, 0).getDay();
+    },
+    currentDay(day) {
+      return new Date().getDate() == day;
+    },
   },
 };
 </script>
@@ -62,6 +79,12 @@ export default {
 @layer base {
   body {
     @apply bg-bodyColor;
+  }
+}
+
+@layer components {
+  .currentDayStyle {
+    @apply border rounded-lg shadow-lg bg-indigo-600 text-red-500 hover:bg-opacity-40 hover:bg-red-900;
   }
 }
 </style>
