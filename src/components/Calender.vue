@@ -17,4 +17,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+@layer base {
+  body {
+    @apply bg-bodyColor;
+  }
+}
+</style>
