@@ -34,10 +34,10 @@
         </p>
       </section>
       <section class="flex justify-between">
-        <button class="px-2 mt-2 active:bg-green-400" @click="prev()">
+        <button class="buttonStyle active:bg-green-400" @click="prev()">
           Previous
         </button>
-        <button class="px-2 mt-2 active:bg-green-400" @click="next()">
+        <button class="buttonStyle active:bg-green-400" @click="next()">
           Next
         </button>
       </section>
@@ -84,7 +84,10 @@ export default {
 
 @layer components {
   .currentDayStyle {
-    @apply border rounded-lg shadow-lg bg-indigo-600 text-red-500 hover:bg-opacity-40 hover:bg-red-900;
+    @apply border rounded-lg shadow-lg bg-indigo-600 text-red-500 hover:bg-opacity-40 hover:text-red-900;
+  }
+  .buttonStyle {
+    @apply px-2 mt-2 hover:text-black;
   }
 }
 </style>
