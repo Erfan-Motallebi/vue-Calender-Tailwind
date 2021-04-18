@@ -49,7 +49,9 @@
 export default {
   data() {
     return {
-      currentMonth: new Date().toLocaleString("default", { month: "long" }),
+      currentMonth: new Date().toLocaleString("default", {
+        month: "long",
+      }),
       currentMonthDays: new Date().getMonth() + 1,
       currentYear: new Date().getFullYear(),
       weeks: ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
